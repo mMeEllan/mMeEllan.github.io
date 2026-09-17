@@ -1,4 +1,6 @@
-
+/*选项：
+顶部菜单栏颜色：line 45
+*/
 
 /* ===== 侧边栏卡片 同款毛玻璃+悬浮 ===== */
 #aside-content .card-widget {
@@ -33,7 +35,8 @@
 #body-wrap #nav .menus_items .menus_item .menus_item_child,
 #body-wrap #pagination .page-number:not(.current),
 #body-wrap #pagination .extend,
-#page-header #post-info {
+#post-info 
+{
     background: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
@@ -41,12 +44,24 @@
     box-shadow: 0 8px 16px -4px rgba(138, 138, 138, 0.15);
     transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
-#body-wrap #pagination .page-number:not(.current):hover,
-#body-wrap #pagination .extend:hover {
-    background: #ff7142d2;
-    border-color: #ff7142d2;
-    color: #fff;
+/* 菜单栏颜色*/
+#page-header.nav-fixed #nav {
+  background: #25242580;  /* 改成你想要的颜色 */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid #25242580;
+  box-shadow: 0 8px 16px -4px#252425ac;
+  transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
+
+#body-wrap #pagination .page-number:not(.current):hover,
+#body-wrap #pagination .extend:hover 
+{
+    background:#BACFE5;
+    border-color: #BACFE5;
+    color: #fff;  
+}
+
 /* 夜间模式 */
 html[data-theme="dark"] #body-wrap #recent-posts > .recent-post-item,
 html[data-theme="dark"] #body-wrap .recent-post-item,
@@ -70,7 +85,7 @@ html:not([data-theme="dark"]) #site-info .site-subtitle,
 html:not([data-theme="dark"]) #subtitle,
 html:not([data-theme="dark"]) #nav #blog-info .site-name,
 html:not([data-theme="dark"]) #nav #blog-info a {
-    color: #dfe9f3 !important;
+    color: #C8DCED !important;
     text-shadow: none !important;
 }
 /* 导航栏菜单、图标 */
@@ -80,7 +95,7 @@ html:not([data-theme="dark"]) #nav .menus_items .menus_item > a > i,
 html:not([data-theme="dark"]) #search-button > a,
 html:not([data-theme="dark"]) #search-button > a > span,
 html:not([data-theme="dark"]) #search-button > a > i {
-    color: #dfe9f3 !important;
+    color: #C8DCED!important;
     text-shadow: none !important;
 }
 html:not([data-theme="dark"]) #nav .menus_item:hover > a,
@@ -101,7 +116,7 @@ html:not([data-theme="dark"]) #post-info #post-meta,
 html:not([data-theme="dark"]) #post-info #post-meta a,
 html:not([data-theme="dark"]) #post-info #post-meta .post-meta-separator,
 html:not([data-theme="dark"]) #post-info #post-meta i {
-    color: #181819 !important;
+    color: #C8DCED!important;
     text-shadow: none !important;
 }
 html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li:hover,
@@ -112,7 +127,7 @@ html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li
 html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li:hover a span,
 html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li.active a,
 html:not([data-theme="dark"]) #post-info #post-meta a:hover {
-    color: #f24bd4 !important;
+    color: #252425 !important;
 }
 /*页眉页脚透明*/
 #footer, #page-header.post-bg, #page-header.page-bg {
