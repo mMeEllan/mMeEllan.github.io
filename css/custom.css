@@ -1,5 +1,5 @@
 /*选项：
-顶部菜单栏颜色：line 45
+菜单栏颜色：line 45
 */
 
 /* ===== 侧边栏卡片 同款毛玻璃+悬浮 ===== */
@@ -49,7 +49,7 @@
   background: #25242580;  /* 改成你想要的颜色 */
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  border: 1px solid #25242580;
+  border: 1px solid #25242556;
   box-shadow: 0 8px 16px -4px#252425ac;
   transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
@@ -85,7 +85,7 @@ html:not([data-theme="dark"]) #site-info .site-subtitle,
 html:not([data-theme="dark"]) #subtitle,
 html:not([data-theme="dark"]) #nav #blog-info .site-name,
 html:not([data-theme="dark"]) #nav #blog-info a {
-    color: #C8DCED !important;
+    color: #d4e9ff !important;/*babyblue*/
     text-shadow: none !important;
 }
 /* 导航栏菜单、图标 */
@@ -95,13 +95,13 @@ html:not([data-theme="dark"]) #nav .menus_items .menus_item > a > i,
 html:not([data-theme="dark"]) #search-button > a,
 html:not([data-theme="dark"]) #search-button > a > span,
 html:not([data-theme="dark"]) #search-button > a > i {
-    color: #C8DCED!important;
+    color: #d4e9ff !important;/*babyblue*/
     text-shadow: none !important;
 }
 html:not([data-theme="dark"]) #nav .menus_item:hover > a,
 html:not([data-theme="dark"]) #nav .menus_item:hover > a > span,
 html:not([data-theme="dark"]) #nav .menus_item:hover > a > i {
-    color: #f24bd4 !important;
+    color: #0DF6FB !important;/*neon blue*/
 }
 /* 底部与 Meta 数据 */
 html:not([data-theme="dark"]) #page-header .page-title,
@@ -110,13 +110,17 @@ html:not([data-theme="dark"]) #footer a,
 html:not([data-theme="dark"]) #footer div,
 html:not([data-theme="dark"]) #footer p,
 html:not([data-theme="dark"]) #footer span,
-html:not([data-theme="dark"]) #footer .copyright *,
+html:not([data-theme="dark"]) #footer .copyright {
+    color: #d4e9ff !important;/*babyblue*/
+    text-shadow: none !important;
+}
+
 html:not([data-theme="dark"]) #post-info .post-title,
 html:not([data-theme="dark"]) #post-info #post-meta,
 html:not([data-theme="dark"]) #post-info #post-meta a,
 html:not([data-theme="dark"]) #post-info #post-meta .post-meta-separator,
 html:not([data-theme="dark"]) #post-info #post-meta i {
-    color: #C8DCED!important;
+    color: #1A1A1C!important;
     text-shadow: none !important;
 }
 html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li:hover,
@@ -127,7 +131,7 @@ html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li
 html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li:hover a span,
 html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li.active a,
 html:not([data-theme="dark"]) #post-info #post-meta a:hover {
-    color: #252425 !important;
+    color: #1a1a1c !important;
 }
 /*页眉页脚透明*/
 #footer, #page-header.post-bg, #page-header.page-bg {
@@ -167,14 +171,19 @@ html:not([data-theme="dark"]) #post-info #post-meta a:hover {
         bottom: 20px !important;
     }
 
+    /*文章标题卡片，文字*/
     #post-info #post-meta > .meta-firstline > span:not(.post-meta-wordcount),
     #post-info #post-meta > .meta-secondline > span:not(.post-meta-wordcount) {
         display: none !important;
+        color:#1a1a1c !important;
+        font-family: "GB8030 Bitmap", "Hoefler Text";
     }
 
     #post-info #post-meta > .meta-firstline > .post-meta-separator,
     #post-info #post-meta > .meta-secondline > .post-meta-separator {
         display: none !important;
+        color:#1a1a1c !important;
+        font-family: "GB8030 Bitmap", "Hoefler Text";
     }
 
     #post-info .post-title {
@@ -182,8 +191,18 @@ html:not([data-theme="dark"]) #post-info #post-meta a:hover {
         text-align-last: left !important;
         display: block;
         margin-bottom: 10px;
+        color:#1a1a1c !important;
+        font-family: "GB8030 Bitmap", "Hoefler Text";
+
     }
 }
+
+#article-container {
+  font-family: "GB8030 Bitmap", "Hoefler Text";
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
 #article-container .mermaid,
 #article-container .mermaid svg,
 .mermaid-wrap,
