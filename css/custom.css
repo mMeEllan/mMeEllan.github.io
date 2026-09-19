@@ -1,6 +1,36 @@
-/*选项：
-菜单栏颜色：line 45
-*/
+
+/*字体声明*/
+/* ===== @font-face：本地托管 GB8030 Bitmap ===== */
+@font-face {
+  font-family: "GB18030 Bitmap";
+  src: url("/fonts/GB8030Bitmap.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;   
+}
+@font-face {
+  font-family: "Hoefler Text";
+  src: url("/fonts/HoeflerText.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}@font-face {
+  font-family: "Hoefler Text";
+  src: url("/fonts/HoeflerTextBlack.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Hoefler Text";
+  src: url("/fonts/HoeflerTextItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Hoefler Text";
+  src: url("/fonts/HoeflerTextBlackItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
 
 /* ===== 侧边栏卡片 同款毛玻璃+悬浮 ===== */
 #aside-content .card-widget {
@@ -26,7 +56,6 @@
 
 
 
-
 /* 明亮模式 */
 #body-wrap #recent-posts > .recent-post-item,
 #body-wrap .recent-post-item,
@@ -37,11 +66,12 @@
 #body-wrap #pagination .extend,
 #post-info 
 {
+    
     background: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.85);
-    box-shadow: 0 8px 16px -4px rgba(138, 138, 138, 0.15);
+    box-shadow: 0 8px 16px -4px #8a8a8a26;
     transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 /* 菜单栏颜色*/
@@ -50,7 +80,7 @@
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border: 1px solid #25242556;
-  box-shadow: 0 8px 16px -4px#252425ac;
+  box-shadow: 0 8px 16px -4px#2524255f;
   transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -59,7 +89,7 @@
 {
     background:#BACFE5;
     border-color: #BACFE5;
-    color: #fff;  
+    
 }
 
 /* 夜间模式 */
@@ -71,7 +101,7 @@ html[data-theme="dark"] #body-wrap #nav .menus_items .menus_item .menus_item_chi
 html[data-theme="dark"] #body-wrap #pagination .page-number:not(.current),
 html[data-theme="dark"] #body-wrap #pagination .extend,
 html[data-theme="dark"] #page-header #post-info {
-    background: rgba(30, 30, 30, 0.6);
+    background: #1e1e1e99;
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2);
 }
@@ -85,9 +115,18 @@ html:not([data-theme="dark"]) #site-info .site-subtitle,
 html:not([data-theme="dark"]) #subtitle,
 html:not([data-theme="dark"]) #nav #blog-info .site-name,
 html:not([data-theme="dark"]) #nav #blog-info a {
-    color: #d4e9ff !important;/*babyblue*/
+    color: rgb(212, 233, 255) !important;/*babyblue*/
     text-shadow: none !important;
 }
+html[data-theme="dark"] #site-title,
+html[data-theme="dark"] .site-title,
+html[data-theme="dark"] #site-name,
+html[data-theme="dark"] #site-info .site-subtitle,
+html[data-theme="dark"] #subtitle,
+html[data-theme="dark"] #nav #blog-info .site-name,
+html[data-theme="dark"] #nav #blog-info a {
+    color: rgb(212, 233, 255) !important;/*babyblue*/
+    text-shadow: none !important;
 /* 导航栏菜单、图标 */
 html:not([data-theme="dark"]) #nav .site-page,
 html:not([data-theme="dark"]) #nav .menus_items .menus_item > a > span,
@@ -101,7 +140,21 @@ html:not([data-theme="dark"]) #search-button > a > i {
 html:not([data-theme="dark"]) #nav .menus_item:hover > a,
 html:not([data-theme="dark"]) #nav .menus_item:hover > a > span,
 html:not([data-theme="dark"]) #nav .menus_item:hover > a > i {
-    color: #0DF6FB !important;/*neon blue*/
+    color: #0df6fb !important;/*neon blue*/
+}
+html[data-theme="dark"] #nav .site-page,
+html[data-theme="dark"] #nav .menus_items .menus_item > a > span,
+html[data-theme="dark"] #nav .menus_items .menus_item > a > i,
+html[data-theme="dark"] #search-button > a,
+html[data-theme="dark"] #search-button > a > span,
+html[data-theme="dark"] #search-button > a > i {
+    color: #d4e9ff !important;/*babyblue*/
+    text-shadow: none !important;
+}
+html[data-theme="dark"] #nav .menus_item:hover > a,
+html[data-theme="dark"] #nav .menus_item:hover > a > span,
+html[data-theme="dark"] #nav .menus_item:hover > a > i {
+    color: #0df6fb !important;/*neon blue*/
 }
 /* 底部与 Meta 数据 */
 html:not([data-theme="dark"]) #page-header .page-title,
@@ -114,7 +167,7 @@ html:not([data-theme="dark"]) #footer .copyright {
     color: #d4e9ff !important;/*babyblue*/
     text-shadow: none !important;
 }
-
+/*标题*/
 html:not([data-theme="dark"]) #post-info .post-title,
 html:not([data-theme="dark"]) #post-info #post-meta,
 html:not([data-theme="dark"]) #post-info #post-meta a,
@@ -131,8 +184,55 @@ html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li
 html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li:hover a span,
 html:not([data-theme="dark"]) #nav .menus_items .menus_item .menus_item_child li.active a,
 html:not([data-theme="dark"]) #post-info #post-meta a:hover {
-    color: #1a1a1c !important;
+    color: #d4e9ff !important;
 }
+/* 导航栏所有菜单项文字 + 图标（所有状态都生效） */
+#nav .menus_items a,
+#nav .menus_items .site-page,
+#nav .menus_items i,
+#nav .site-page.group {
+  color: #d4e9ff !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+
+/* 底部与 Meta 数据（深色模式） */
+
+/*
+html[data-theme="dark"] #page-header .page-title,
+html[data-theme="dark"] #footer,
+html[data-theme="dark"] #footer a,
+html[data-theme="dark"] #footer div,
+html[data-theme="dark"] #footer p,
+html[data-theme="dark"] #footer span,
+html[data-theme="dark"] #footer .copyright {
+  color: #d4e9ff !important;
+  text-shadow: none !important;
+}
+标题（深色模式
+html[data-theme="dark"] #post-info .post-title,
+html[data-theme="dark"] #post-info #post-meta,
+html[data-theme="dark"] #post-info #post-meta a,
+html[data-theme="dark"] #post-info #post-meta .post-meta-separator,
+html[data-theme="dark"] #post-info #post-meta i {
+  color: #d4e9ff!important;
+  text-shadow: none !important;
+}
+
+html[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li:hover,
+html[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li.active {
+  background: transparent !important; 
+}
+
+html[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li:hover a,
+html[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li:hover a span,
+html[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li.active a,
+html[data-theme="dark"] #post-info #post-meta a:hover {
+  color: #d4e9ff !important;
+}
+*/
+
 /*页眉页脚透明*/
 #footer, #page-header.post-bg, #page-header.page-bg {
     background: transparent !important;
@@ -197,20 +297,53 @@ html:not([data-theme="dark"]) #post-info #post-meta a:hover {
     }
 }
 
-#article-container {
-  font-family: "GB8030 Bitmap", "Hoefler Text";
-  font-size: 1.05rem;
-  line-height: 1.8;
+::-webkit-scrollbar {
+  width: 2px !important;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.18) !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2) !important;
+  border-radius: 2px;
+}
+/* 页面整体滚动条（强制覆盖主题样式） */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#aside-content::-webkit-scrollbar,
+#article-container::-webkit-scrollbar {
+  width: 2px !important;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+#aside-content::-webkit-scrollbar-track,
+#article-container::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.18) !important;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+#aside-content::-webkit-scrollbar-thumb,
+#article-container::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2) !important;
+  border-radius: 2cqw;
 }
 
-#article-container .mermaid,
+/* Firefox */
+html, body, * {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(0,0,0,.2) rgba(0,0,0,0.18) !important;
+}
+
+
+
+/*#article-container .mermaid,
 #article-container .mermaid svg,
 .mermaid-wrap,
 #article-container .mermaid svg rect.mermaid-bg,
 #article-container .mermaid svg rect:first-child {
     background: transparent !important;
     fill: transparent !important;
-}
+}*/
 /* 全局颜色变量 */
 html:not([data-theme="dark"]) {
     --hl-bg: #f4f7fa !important;
@@ -369,3 +502,156 @@ iframe[src*="vimeo.com"] {
     height: auto;
 }
 
+
+
+
+
+/* ===== 全局：body，侧边栏、正文段落共用，中英文 Hoefler Text ===== */
+body {
+  font-family: "Hoefler Text", Georgia, "PingFang SC", "Microsoft YaHei", serif;
+  
+}
+
+/* ===== 文章正文段落 ===== */
+#article-container p,
+#article-container li,
+#article-container blockquote {
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* ===== 文章标题 + 网站标题：中文优先点阵，英文回退 Hoefler Text ===== */
+#nav .menus_items a,
+#nav .menus_items .site-page,
+#nav .menus_items i,
+#nav .site-page.group 
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#site-title {
+  font-family: "GB18030 Bitmap", 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', 'Source Han Serif SC', serif; !important;
+  font-weight: normal; 
+  /* 点阵字体建议整数倍字号，如 16px→32px，保持像素锐利 */
+}
+
+/* ===== 小标题 h4 h5 h6===== */
+#article-container h4,
+#article-container h5,
+#article-container h6 {
+  font-weight: 500;
+}
+
+/* ===== 明暗模式正文颜色 ===== */
+[data-theme="light"] #article-container p,
+[data-theme="light"] #article-container li,
+[data-theme="light"] #article-container blockquote {
+  color: #2c2c2c;
+}
+[data-theme="dark"] #article-container p,
+[data-theme="dark"] #article-container li,
+[data-theme="dark"] #article-container blockquote {
+  color: #dadada;
+}
+
+}
+/* 导航栏菜单项文字（不包含 i 图标，避免覆盖 FA 字体） */
+#nav .menus_items .menus_item a,
+#nav .menus_items .menus_item a .site-page,
+#nav .site-page.group,
+#nav .site-page.group span,
+#nav #search-button,
+#nav #search-button .site-page,
+#nav #search-button span,
+#nav #search-button a {
+  color: #d4e9ff !important;
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+/* 文章主标题 + meta 信息：仅明亮模式，颜色 #1a1a1a，字体 GB18030 Bitmap / Hoefler Text */
+html:not([data-theme="dark"]) #post-info .post-title,
+html:not([data-theme="dark"]) #post-info #post-meta,
+html:not([data-theme="dark"]) #post-info #post-meta a,
+html:not([data-theme="dark"]) #post-info #post-meta .post-meta-separator {
+  color: #1a1a1a !important;
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', serif !important;
+}
+/* meta 里的 FA 图标保持原字体，避免空心方框 */
+html:not([data-theme="dark"]) #post-info #post-meta i {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900 !important;
+}
+/* 文章正文 + 侧边栏字体：Hoefler Text（不包含主标题） */
+#article-container,
+#article-container p,
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#article-container h4,
+#article-container h5,
+#article-container h6,
+#article-container li,
+#article-container blockquote,
+#article-container td,
+#article-container th,
+#article-container figcaption,
+#aside-content,
+#aside-content p,
+#aside-content a,
+#aside-content span,
+#aside-content li {
+  font-family: 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', 'Source Han Serif SC', serif !important;
+}
+/* 文章主标题 + meta 信息：暗黑模式，颜色 #d4e9ff，字体 GB18030 Bitmap / Hoefler Text */
+html[data-theme="dark"] #post-info .post-title,
+html[data-theme="dark"] #post-info #post-meta,
+html[data-theme="dark"] #post-info #post-meta a,
+html[data-theme="dark"] #post-info #post-meta .post-meta-separator {
+  color: #d4e9ff !important;
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', serif !important;
+}
+
+/* meta 里的 FA 图标保持原字体，避免空心方框 */
+html[data-theme="dark"] #post-info #post-meta i {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900 !important;
+}
+
+/* 主页文章卡片标题：中文自动用 GB18030 Bitmap，英文自动回退到 Hoefler Text */
+.article-sort-item .article-sort-item-title,
+.article-sort-item-title,
+.post-cards-item .post-cards-item__title,
+.post-cards-item__title,
+.article-title,
+#recent-posts .recent-post-item__title {
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', serif !important;
+}
+
+/* 主页文章卡片摘要/正文：全部 Hoefler Text */
+.article-sort-item 
+.article-sort-item-excerpt,
+.article-sort-item-excerpt,
+.post-cards-item 
+.post-cards-item__description,
+.post-cards-item__description,
+.article-excerpt,
+
+.article-sort-item .content,
+.article-sort-item .content p,
+.article-sort-item .content a 
+
+#recent-posts .recent-post-item__tip,
+#recent-posts .recent-post-item__date {
+  font-family: 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
+}
+/* 首页文章卡片正文摘要：Hoefler Text（通用覆盖） */
+.article-sort-item p,
+.article-sort-item .excerpt,
+.article-sort-item .article-sort-item__content,
+.article-sort-item .article-content,
+.post-cards-item p,
+.post-cards-item .excerpt,
+.post-cards-item .content {
+  font-family:'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
+}
