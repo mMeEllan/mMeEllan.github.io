@@ -178,6 +178,41 @@ template {
 [hidden] {
   display: none
 }
+::-webkit-scrollbar {
+  width: 2px !important;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.18) !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2) !important;
+  border-radius: 2px;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#aside-content::-webkit-scrollbar,
+#article-container::-webkit-scrollbar {
+  width: 2px !important;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+#aside-content::-webkit-scrollbar-track,
+#article-container::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.18) !important;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+#aside-content::-webkit-scrollbar-thumb,
+#article-container::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2) !important;
+  border-radius: 2cqw;
+}
+html,
+body,
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(0,0,0,0.2) rgba(0,0,0,0.18) !important;
+}
 .limit-one-line,
 .container .flink .flink-item-name,
 .container .flink .flink-item-desc,
@@ -4912,6 +4947,61 @@ figure.highlight pre .javascript .function {
   -o-transform: translateY(10px);
   -ms-transform: translateY(10px);
   transform: translateY(10px);
+}
+#nav #search-button,
+#nav #toggle-menu,
+#nav .site-page.group {
+  color: #d4e9ff;
+/* 图标只改颜色，保持 FA 字体 */
+/* 文字部分才改字体 */
+}
+#nav #search-button i[class*="fa-"],
+#nav #toggle-menu i[class*="fa-"],
+#nav .site-page.group i[class*="fa-"] {
+  color: #d4e9ff;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+#nav #search-button span,
+#nav #toggle-menu span,
+#nav .site-page.group span,
+#nav #search-button .site-page,
+#nav #toggle-menu .site-page,
+#nav .site-page.group .site-page {
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
+}
+i[class*="fa-"] {
+  color: #d4e9ff /* 只改颜色 */;
+  font-family: 'Font Awesome 5 Free' /* 保持原 FA 字体，不覆盖 */;
+}
+span {
+  font-family: 'GB18030 Bitmap', serif !important; /* 文字才换字体 */
+}
+#menu .menu-item {
+  color: #d4e9ff;
+}
+#menu .menu-item a,
+#menu .menu-item span {
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
+}
+#menu .menu-item i[class*="fa-"] {
+  color: #d4e9ff;
+  font-family: 'Font Awesome 5 Free';
+}
+#menu .author-info-data,
+#menu .author-info-data span,
+#menu .author-info-data a,
+#menu .menu-list .menu-item,
+#menu .menu-list .menu-item a,
+#menu .menu-list .menu-item span {
+  color: #d4e9ff !important;
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
+}
+#menu i[class*="fa-"],
+#menu .menu-item i[class*="fa-"] {
+  color: #d4e9ff !important;
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900 !important;
 }
 #pagination .pagination {
   margin-top: 20px;

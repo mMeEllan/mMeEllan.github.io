@@ -46,12 +46,16 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.10);
 }
 /* 暗黑模式侧边栏 */
-[data-theme="dark"] #aside-content .card-widget {
+[data-theme="dark"] #aside-content #aside-content .card-widget {
   background: rgba(30, 30, 30, 0.35);
   border: 1px solid rgba(255,255,255,0.15);
+  color: #d4e9ff !important;
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', serif !important;
 }
-[data-theme="dark"] #aside-content .card-widget:hover {
+[data-theme="dark"] #aside-content #aside-content .card-widget:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  color: #d4e9ff !important;
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', serif !important;
 }
 
 
@@ -297,42 +301,6 @@ html[data-theme="dark"] #post-info #post-meta a:hover {
     }
 }
 
-::-webkit-scrollbar {
-  width: 2px !important;
-}
-::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.18) !important;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,.2) !important;
-  border-radius: 2px;
-}
-/* 页面整体滚动条（强制覆盖主题样式） */
-html::-webkit-scrollbar,
-body::-webkit-scrollbar,
-#aside-content::-webkit-scrollbar,
-#article-container::-webkit-scrollbar {
-  width: 2px !important;
-}
-html::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track,
-#aside-content::-webkit-scrollbar-track,
-#article-container::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.18) !important;
-}
-html::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb,
-#aside-content::-webkit-scrollbar-thumb,
-#article-container::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,.2) !important;
-  border-radius: 2cqw;
-}
-
-/* Firefox */
-html, body, * {
-  scrollbar-width: thin !important;
-  scrollbar-color: rgba(0,0,0,.2) rgba(0,0,0,0.18) !important;
-}
 
 
 
@@ -655,3 +623,4 @@ html[data-theme="dark"] #post-info #post-meta i {
 .post-cards-item .content {
   font-family:'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
 }
+

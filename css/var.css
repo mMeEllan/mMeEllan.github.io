@@ -1,0 +1,37 @@
+::-webkit-scrollbar {
+  width: 2px !important;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.18) !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2) !important;
+  border-radius: 2px;
+}
+/* 页面整体滚动条（强制覆盖主题样式） */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#aside-content::-webkit-scrollbar,
+#article-container::-webkit-scrollbar {
+  width: 2px !important;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+#aside-content::-webkit-scrollbar-track,
+#article-container::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.18) !important;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+#aside-content::-webkit-scrollbar-thumb,
+#article-container::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2) !important;
+  border-radius: 2cqw;
+}
+/* Firefox */
+html,
+body,
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(0,0,0,0.2) rgba(0,0,0,0.18) !important;
+}
