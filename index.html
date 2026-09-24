@@ -213,7 +213,7 @@
       const eleGroup = document.querySelectorAll('#recent-posts .waline-comment-count')
       const keyArray = Array.from(eleGroup).map(i => i.getAttribute('data-path'))
 
-      const res = await fetch(`https://mmeellan.github.io/comment/api/comment?type=count&url=${keyArray}`, { method: 'GET' })
+      const res = await fetch(`https://app-production-5965.up.railway.app/api/comment?type=count&url=${keyArray}`, { method: 'GET' })
       const result = await res.json()
 
       result.data.forEach((count, index) => {
