@@ -1,9 +1,9 @@
 
 /*字体声明*/
-/* ===== @font-face：本地托管 GB8030 Bitmap ===== */
+/* ===== @font-face：本地托管 GB18030 Bitmap ===== */
 @font-face {
   font-family: "GB18030 Bitmap";
-  src: url("/fonts/GB8030Bitmap.woff2") format("woff2");
+  src: url("/fonts/GB18030Bitmap.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;   
@@ -280,14 +280,14 @@ html[data-theme="dark"] #post-info #post-meta a:hover {
     #post-info #post-meta > .meta-secondline > span:not(.post-meta-wordcount) {
         display: none !important;
         color:#1a1a1c !important;
-        font-family: "GB8030 Bitmap", "Hoefler Text";
+        font-family: "G1B8030 Bitmap", "Hoefler Text";
     }
 
     #post-info #post-meta > .meta-firstline > .post-meta-separator,
     #post-info #post-meta > .meta-secondline > .post-meta-separator {
         display: none !important;
         color:#1a1a1c !important;
-        font-family: "GB8030 Bitmap", "Hoefler Text";
+        font-family: "GB18030 Bitmap", "Hoefler Text";
     }
 
     #post-info .post-title {
@@ -296,7 +296,7 @@ html[data-theme="dark"] #post-info #post-meta a:hover {
         display: block;
         margin-bottom: 10px;
         color:#1a1a1c !important;
-        font-family: "GB8030 Bitmap", "Hoefler Text";
+        font-family: "GB18030 Bitmap", "Hoefler Text";
 
     }
 }
@@ -624,3 +624,24 @@ html[data-theme="dark"] #post-info #post-meta i {
   font-family:'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
 }
 
+/* 窄屏导航栏按钮：搜索 + 汉堡菜单 */
+#nav #search-button,
+#nav #search-button a,
+#nav #search-button i,
+#nav #toggle-menu,
+#nav #toggle-menu a,
+#nav #toggle-menu i,
+#nav .site-page.group,
+#nav .site-page.group i {
+  color: #d4e9ff !important;
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
+}
+
+/* 展开后的移动端菜单面板 */
+#menu,
+#menu .menu-item,
+#menu .menu-item a,
+#menu .menu-item span {
+  color: #d4e9ff !important;
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
+}
