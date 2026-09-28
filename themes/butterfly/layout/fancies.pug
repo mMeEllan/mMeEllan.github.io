@@ -1,0 +1,25 @@
+extends page
+
+block content
+
+  .fancies
+
+    each item in site.data.fancies
+
+      article.fancies-item
+
+
+        //- 时间节点
+        time.fancies-date
+          = item.date
+
+
+        //- 内容卡片
+        .fancies-card
+
+          h2.fancies-title
+            = item.title
+
+
+          .fancies-content
+            = item.content

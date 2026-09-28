@@ -645,3 +645,277 @@ html[data-theme="dark"] #post-info #post-meta i {
   color: #d4e9ff !important;
   font-family: 'GB18030 Bitmap', 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
 }
+/* 菜单图标：只改颜色，保持 FA 字体 */
+#menu i[class*="fa-"],
+#menu .menu-item i[class*="fa-"] {
+  color: #d4e9ff !important;
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900 !important;}
+
+
+
+/* 窄屏导航按钮：搜索 + 汉堡菜单 */
+#nav
+  #search-button,
+  #toggle-menu,
+  .site-page.group{
+    color: #d4e9ff}
+
+  
+/* 移动端侧边菜单：统计文字 + 菜单项 */
+#menu .author-info-data,
+#menu .author-info-data span,
+#menu .author-info-data a,
+#menu .menu-list .menu-item,
+#menu .menu-list .menu-item a,
+#menu .menu-list .menu-item span {
+  color: #d4e9ff !important;
+  font-family: 'GB18030 Bitmap', 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
+}
+
+
+
+/* fancies页全局字体 */
+.fancies,
+.fancies * {
+
+    font-family:
+        "Hoefler Text",
+        "Times New Roman",
+        serif;
+
+}
+
+
+
+/* =========================================
+   Fancies Archive Timeline (Only Timeline)
+========================================= */
+
+
+/* 时间线主体 */
+
+.fancies {
+    position: relative;
+    padding-left: 55px;
+}
+
+
+
+/* 左侧虚线时间轴 */
+
+.fancies::before {
+
+    content:"";
+    position:absolute;
+    left:18px;
+    top:10px;
+    bottom:10px;
+    width:2px;
+    background:
+
+        repeating-linear-gradient(
+            to bottom,
+            #be4bff 0,
+            #be4bff 7px,
+            transparent 7px,
+            transparent 15px
+        );
+
+}
+
+
+
+/* 深色模式时间轴 */
+
+[data-theme="dark"] .fancies::before {
+
+
+    background:
+
+        repeating-linear-gradient(
+            to bottom,
+            #d4e9ff 0,
+            #d4e9ff 7px,
+            transparent 7px,
+            transparent 15px
+        );
+
+
+}
+/* 单条记录 */
+
+.fancies-item {
+    position:relative;
+
+}
+/* 深色模式节点 */
+
+[data-theme="dark"] .fancies-item::before {
+    background:#d4e9ff;
+    border-color:#d4e9ff;
+}
+
+
+/* =========================================
+   Archive Item
+========================================= */
+
+.fancies-item {
+    position:relative;
+    margin-bottom:45px;
+}
+
+/* =========================================
+   Timeline Node
+========================================= */
+
+.fancies-item::before {
+    content:"";
+    position:absolute;
+    left:-29px;
+    top:38px;
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#be4bff;
+    border:
+        1px solid #be4bff;
+    z-index:3;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+/* Light node */
+
+.fancies-item::after {
+    content:"";
+    position:absolute;
+    left:-29px;
+    top:38px;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+}
+/* =========================================
+   Dark Mode Node
+========================================= */
+
+[data-theme="dark"] .fancies-item::before {
+    background: #d4e9ff;
+    border-color: #d4e9ff;
+    
+}
+
+[data-theme="dark"] .fancies-item::after {
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+    
+}
+
+/* Hover Effect */
+.fancies-item:hover::before {
+    transform:
+        scale(1.35);
+}
+
+[data-theme="dark"] .fancies-item:hover::before {
+    box-shadow:
+        0 0 12px #d4e9ff,
+        
+}
+
+/* =========================================
+   Glass Archive Card
+========================================= */
+.fancies-card {
+
+    padding:
+        24px 45px;
+    border-radius:
+        18px;
+    background:
+        rgba(255,255,255,.42);
+    backdrop-filter:
+        blur(18px);
+    -webkit-backdrop-filter:
+        blur(18px);
+    border:
+        1px solid rgba(255,255,255,.35);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+}
+
+/* Dark Glass */
+
+
+[data-theme="dark"] .fancies-card {
+    background:
+        #00000060;
+    border:
+        1px solid #777f872e;
+    box-shadow:
+        0 15px 50px #00000073,
+        inset 0 0 30px #be4bff0d;
+
+}
+/* =========================================
+   Date
+========================================= */
+
+.fancies-date {
+    display:block;
+    margin-bottom:15px;
+    font-size:.85rem;
+    letter-spacing:.15em;
+    opacity:.65;
+    margin-left:0;
+    margin-bottom:10px;
+    font-style:italic;
+}
+
+/* =========================================
+   Title
+========================================= */
+
+.fancies-title {
+
+    letter-spacing:.06em;
+}
+
+/* =========================================
+   Content
+========================================= */
+.fancies-content {
+
+    line-height:2;
+    letter-spacing:.05em;
+    text-align:justify;
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media(max-width:768px){
+    .fancies {
+        padding-left:35px;
+    }
+    .fancies::before {
+        left:8px;
+    }
+    .fancies-item::before {
+        left:-34px;
+        width:12px;
+        height:12px;
+    }
+
+    .fancies-card {
+        padding:20px 25px;
+    }
+}
+
+/* ==============
+
