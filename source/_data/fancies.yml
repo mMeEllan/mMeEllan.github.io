@@ -1,12 +1,20 @@
+- date: "2026-09-29"
+  title: "终于..!!"
+  content: |
+     还有一天就放假啦～
+  
+
 - date: "2026-09-28"
   title: "关于周一"
   content: |
-    （*抱着杀人的决心起床
+     （*凭借杀人般的意志起床
 
 - date: "2026-09-25"
   title: "中秋节假期！！"
   content: |
     很高兴见到你（优雅地鞠躬
-
+  gallery:
+    - /img/moon-admiring.jpg
+    - /img/night.png
 
 

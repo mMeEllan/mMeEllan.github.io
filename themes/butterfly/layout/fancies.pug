@@ -1,25 +1,21 @@
 extends page
-
 block content
-
   .fancies
-
     each item in site.data.fancies
-
       article.fancies-item
-
-
-        //- 时间节点
-        time.fancies-date
-          = item.date
-
-
+        
         //- 内容卡片
         .fancies-card
-
+          time.fancies-date
+          = item.date
           h2.fancies-title
             = item.title
-
-
           .fancies-content
-            = item.content
+            != markdown(item.content)
+          
+            
+        if item.gallery
+          .fancies-gallery(style="--gallery-count:" + item.gallery.length onclick="this.classList.toggle('expanded')")
+            each img, index in item.gallery
+              img.gallery-image(src=img style="--index:" + index)
+          

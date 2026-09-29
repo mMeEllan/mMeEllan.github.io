@@ -58,7 +58,7 @@ subtitle:
   sub:
     - 在湖边等晚风吹过
     - 冬与夏之间摆渡
-    - 或许我们不会再重逢
+    - 或许我们不会重逢
     - 在此相遇便足够^^
 
 
@@ -421,7 +421,7 @@ rightside_bottom:
 
 # Conversion between Traditional and Simplified Chinese
 translate:
-  enable: false
+  enable: true
   # The text of a button
   default: 繁
   # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
@@ -434,7 +434,7 @@ translate:
   msgToSimplifiedChinese: '簡'
 
 # Read Mode
-readmode: false
+readmode: true
 
 # Dark Mode
 darkmode:
@@ -447,8 +447,8 @@ darkmode:
   # autoChangeMode: false
   autoChangeMode: true
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
-  start:
-  end:
+  start: 1
+  end: 6
 
 # Show scroll percent in scroll-to-top button
 rightside_scroll_percent: false
@@ -458,7 +458,7 @@ rightside_scroll_percent: false
 # Don't repeat the same value
 rightside_item_order:
   enable: true
-  hide: readmode,translate,hideAside,toc,chat,comment
+  hide: readmode,translate,hideAside
   show: darkmode
 
 # Animation for the bottom right config button
