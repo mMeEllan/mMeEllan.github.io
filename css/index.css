@@ -493,7 +493,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a,
 .container .btn-beautify,
 .hide-inline > .hide-button,
-.hide-block > .hide-button {
+.hide-block > .hide-button,
+.read-mode .exit-readmode {
   position: relative;
   overflow: hidden;
   -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -515,7 +516,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a:hover,
 .container .btn-beautify:hover,
 .hide-inline > .hide-button:hover,
-.hide-block > .hide-button:hover {
+.hide-block > .hide-button:hover,
+.read-mode .exit-readmode:hover {
   -webkit-box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   text-decoration: none;
@@ -533,7 +535,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a:active,
 .container .btn-beautify:active,
 .hide-inline > .hide-button:active,
-.hide-block > .hide-button:active {
+.hide-block > .hide-button:active,
+.read-mode .exit-readmode:active {
   -webkit-transition-duration: 0.1s;
   -moz-transition-duration: 0.1s;
   -o-transition-duration: 0.1s;
@@ -553,7 +556,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a i,
 .container .btn-beautify i,
 .hide-inline > .hide-button i,
-.hide-block > .hide-button i {
+.hide-block > .hide-button i,
+.read-mode .exit-readmode i {
   display: inline-block;
   vertical-align: middle;
   -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -570,7 +574,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a:hover i,
 .container .btn-beautify:hover i,
 .hide-inline > .hide-button:hover i,
-.hide-block > .hide-button:hover i {
+.hide-block > .hide-button:hover i,
+.read-mode .exit-readmode:hover i {
   -webkit-animation: buttonIconBounce 0.6s ease-in-out;
   -moz-animation: buttonIconBounce 0.6s ease-in-out;
   -o-animation: buttonIconBounce 0.6s ease-in-out;
@@ -585,7 +590,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a i + span,
 .container .btn-beautify i + span,
 .hide-inline > .hide-button i + span,
-.hide-block > .hide-button i + span {
+.hide-block > .hide-button i + span,
+.read-mode .exit-readmode i + span {
   margin-left: 6px;
   vertical-align: middle;
   -webkit-transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -602,7 +608,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a:hover i + span,
 .container .btn-beautify:hover i + span,
 .hide-inline > .hide-button:hover i + span,
-.hide-block > .hide-button:hover i + span {
+.hide-block > .hide-button:hover i + span,
+.read-mode .exit-readmode:hover i + span {
   margin-left: 8px;
 }
 .btn-effects::before,
@@ -613,7 +620,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a::before,
 .container .btn-beautify::before,
 .hide-inline > .hide-button::before,
-.hide-block > .hide-button::before {
+.hide-block > .hide-button::before,
+.read-mode .exit-readmode::before {
   position: absolute;
   top: 0;
   left: -100%;
@@ -640,7 +648,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a:hover::before,
 .container .btn-beautify:hover::before,
 .hide-inline > .hide-button:hover::before,
-.hide-block > .hide-button:hover::before {
+.hide-block > .hide-button:hover::before,
+.read-mode .exit-readmode:hover::before {
   left: 100%;
 }
 .btn-effects > *,
@@ -651,7 +660,8 @@ canvas:not(#ribbon-canvas),
 #rightside > div > a > *,
 .container .btn-beautify > *,
 .hide-inline > .hide-button > *,
-.hide-block > .hide-button > * {
+.hide-block > .hide-button > *,
+.read-mode .exit-readmode > * {
   position: relative;
   z-index: 2;
 }
@@ -7426,6 +7436,216 @@ blockquote.pullquote.right {
   --waline-color: rgba(255,255,255,0.7);
   --waline-dark-grey: rgba(255,255,255,0.7);
   --waline-info-color: rgba(255,255,255,0.5);
+}
+.read-mode {
+  --font-color: #4c4948;
+  --readmode-light-color: #fff;
+  --white: #4c4948;
+  --light-grey: #4c4948;
+  --gray: #d6dbdf;
+  --hr-border: #d6dbdf;
+  --hr-before-color: #b9c2c9;
+  --highlight-bg: #f7f7f7;
+  --exit-btn-bg: #c0c0c0;
+  --exit-btn-color: #fff;
+  --exit-btn-hover: #8d8d8d;
+  --pseudo-hover: none;
+}
+[data-theme='dark'] .read-mode {
+  --font-color: rgba(255,255,255,0.7);
+  --readmode-light-color: #0d0d0d;
+  --white: rgba(255,255,255,0.9);
+  --light-grey: rgba(255,255,255,0.7);
+  --gray: rgba(255,255,255,0.7);
+  --hr-border: rgba(255,255,255,0.5);
+  --hr-before-color: rgba(255,255,255,0.7);
+  --highlight-bg: #171717;
+  --exit-btn-bg: #1f1f1f;
+  --exit-btn-color: rgba(255,255,255,0.9);
+  --exit-btn-hover: #525252;
+}
+.read-mode {
+  background: var(--readmode-light-color);
+}
+.read-mode .exit-readmode {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  background: var(--exit-btn-bg);
+  color: var(--exit-btn-color);
+  font-size: 16px;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition: background 0.3s;
+  border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  .read-mode .exit-readmode {
+    top: initial;
+    bottom: 30px;
+  }
+}
+.read-mode .exit-readmode:hover {
+  background: var(--exit-btn-hover);
+}
+.read-mode #aside-content {
+  display: none;
+}
+.read-mode #page-header.post-bg {
+  background: none !important;
+}
+.read-mode #page-header.post-bg:before {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.read-mode #page-header.post-bg > #post-info {
+  text-align: center;
+}
+.read-mode #post {
+  margin: 0 auto;
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.read-mode #post:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.read-mode > canvas {
+  display: none !important;
+}
+.read-mode .highlight-tools,
+.read-mode #footer,
+.read-mode #post > *:not(#post-info):not(.post-content),
+.read-mode #nav,
+.read-mode #post-outdate-notice,
+.read-mode #web_bg,
+.read-mode #rightside,
+.read-mode .not-top-img {
+  display: none !important;
+}
+.read-mode .container a {
+  color: #99a9bf;
+}
+.read-mode .container pre,
+.read-mode .container .highlight:not(.js-file-line-container) {
+  background: var(--highlight-bg) !important;
+}
+.read-mode .container pre *,
+.read-mode .container .highlight:not(.js-file-line-container) * {
+  color: var(--font-color) !important;
+}
+.read-mode .container figure.highlight {
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.read-mode .container figure.highlight > :not(.highlight-tools) {
+  display: block !important;
+}
+.read-mode .container figure.highlight .line:before {
+  color: var(--font-color) !important;
+}
+.read-mode .container figure.highlight .hljs {
+  background: var(--highlight-bg) !important;
+}
+.read-mode .container h1,
+.read-mode .container h2,
+.read-mode .container h3,
+.read-mode .container h4,
+.read-mode .container h5,
+.read-mode .container h6 {
+  padding: 0;
+}
+.read-mode .container h1:before,
+.read-mode .container h2:before,
+.read-mode .container h3:before,
+.read-mode .container h4:before,
+.read-mode .container h5:before,
+.read-mode .container h6:before {
+  content: '';
+}
+.read-mode .container h1:hover,
+.read-mode .container h2:hover,
+.read-mode .container h3:hover,
+.read-mode .container h4:hover,
+.read-mode .container h5:hover,
+.read-mode .container h6:hover {
+  padding: 0;
+}
+.read-mode .container ul:hover:before,
+.read-mode .container li:hover:before,
+.read-mode .container ol:hover:before {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -o-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
+}
+.read-mode .container ol:before,
+.read-mode .container li:before {
+  background: transparent !important;
+  color: var(--font-color) !important;
+}
+.read-mode .container ul >li:before {
+  border-color: var(--gray) !important;
+}
+.read-mode .container .tabs {
+  border: 2px solid var(--tab-border-color);
+}
+.read-mode .container .tabs > .nav-tabs {
+  background: transparent;
+}
+.read-mode .container .tabs > .nav-tabs > .tab {
+  border-top: none !important;
+}
+.read-mode .container .tabs > .tab-contents .tab-item-content.active {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  -ms-animation: none;
+  animation: none;
+}
+.read-mode .container code {
+  color: var(--font-color);
+}
+.read-mode .container blockquote {
+  border-color: var(--gray);
+  background-color: var(--readmode-light-color);
+}
+.read-mode .container kbd {
+  border: 1px solid var(--gray);
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: var(--font-color);
+}
+.read-mode .container .hide-toggle {
+  border: 1px solid var(--gray) !important;
+}
+.read-mode .container .hide-button,
+.read-mode .container .btn-beautify,
+.read-mode .container .hl-label {
+  border: 1px solid var(--gray) !important;
+  background: var(--readmode-light-color) !important;
+  color: var(--font-color) !important;
+}
+.read-mode .container .note {
+  border: 2px solid var(--gray);
+  border-left-color: var(--gray) !important;
+  filter: none;
+  background-color: var(--readmode-light-color) !important;
+  color: var(--font-color);
+}
+.read-mode .container .note:before,
+.read-mode .container .note .note-icon {
+  color: var(--font-color);
 }
 .search-dialog {
   position: fixed;
