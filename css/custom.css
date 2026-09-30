@@ -633,7 +633,11 @@ html[data-theme="dark"] #post-info #post-meta i {
   color: #d4e9ff !important;
   font-family: 'GB18030 Bitmap', 'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
 }
-
+#nav #search-button i,
+#nav #toggle-menu i
+{
+  font-family: 'Font Awesome 5 Free' !important;
+}
 
 
 /* fancies页全局字体 */
@@ -641,9 +645,7 @@ html[data-theme="dark"] #post-info #post-meta i {
 .fancies * {
 
     font-family:
-        "Hoefler Text",
-        "Times New Roman",
-        serif;
+        'Hoefler Text', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'Noto Serif CJK SC', serif !important;
 
 }
 
